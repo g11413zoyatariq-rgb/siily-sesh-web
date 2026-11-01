@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaryab & Abubakar — Shaadi Invitation 💀</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+    --pink: #ff168b;
+    --paper: #fff4ed;
+    --ink: #160d0d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f01888;
+    color: var(--paper);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+    padding: 22px;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(#f0188860, #f0188860),
+        url("image.png") center/cover no-repeat;
+    z-index: -2;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1000;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0 3px,
+        #10070712 4px 5px
+    );
+}
+
+.page {
+    min-height: calc(100vh - 44px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.panel {
+    position: relative;
+    width: min(900px, 100%);
+    padding: clamp(24px, 5vw, 55px);
+    text-align: center;
+    background: #160d0df0;
+    border: 3px solid var(--paper);
+    box-shadow: 10px 10px 0 var(--pink),
+                17px 17px 0 var(--ink);
+    transform: rotate(-.3deg);
+}
+
+.stamp {
+    position: absolute;
+    top: -17px;
+    right: 18px;
+    padding: 8px 13px;
+    background: var(--pink);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    font: 500 11px 'DM Mono';
+    transform: rotate(4deg);
+}
+
+.kicker,
+.progress,
+.small,
+.footer,
+.intro {
+    font-family: 'DM Mono', monospace;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.kicker {
+    font-size: 11px;
+    color: #ff8fc5;
+}
+
+h1 {
+    font: clamp(43px, 9vw, 94px)/.94 Anton, sans-serif;
+    text-transform: uppercase;
+    margin: 22px 0;
+    color: var(--paper);
+    text-shadow: 5px 5px 0 var(--pink),
+                 9px 9px 0 #5b163e;
+}
+
+h2 {
+    font: clamp(29px, 6vw, 57px)/1 Anton, sans-serif;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.intro {
+    font-size: 11px;
+}
+
+.rule {
+    height: 3px;
+    margin: 25px 0;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--pink) 0 13px,
+        transparent 13px 21px
+    );
+}
+
+.progress {
+    font-size: 11px;
+    color: #ff8fc5;
+}
+
+.question {
+    font: clamp(26px, 4.7vw, 47px)/1.05 Anton, sans-serif;
+    text-transform: uppercase;
+    margin: 24px auto 15px;
+}
+
+p {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.55;
+    max-width: 660px;
+    margin: 12px auto;
+}
+
+button {
+    border: 2px solid var(--paper);
+    padding: 14px 24px;
+    font: 700 15px 'Space Grotesk';
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+button:hover {
+    box-shadow: 5px 5px 0 var(--pink);
+}
+
+.yes {
+    background: var(--pink);
+    color: var(--ink);
+    box-shadow: 4px 4px 0 var(--paper);
+}
+
+.no {
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 4px 4px 0 var(--pink);
+}
+
+#buttonZone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-height: 90px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+#yesBtn {
+    position: relative;
+    z-index: 2;
+}
+
+.small {
+    font-size: 10px;
+    color: #ff9bcb;
+    margin-top: 24px;
+}
+
+.footer {
+    font-size: 9px;
+    color: #ffc2df;
+    margin-top: 26px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid var(--pink);
+    padding: 7px 10px;
+    color: #ff8fc5;
+    font: 11px 'DM Mono';
+    transform: rotate(-2deg);
+}
+
+.glitch {
+    animation: glitch .35s steps(2) 2;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    25% { transform: translate(5px,-2px) skewX(2deg); }
+    50% { transform: translate(-4px,2px); }
+    75% { transform: translate(2px,1px) skewX(-2deg); }
+    100% { transform: translate(0); }
+}
+
+/* SECOND PAGE: DESI TRUCK ART */
+
+#pageTwo {
+    font-family: Georgia, serif;
+    color: #7a0000;
+}
+
+.outer {
+    background: repeating-linear-gradient(
+        0deg,
+        #ff0000 0 8px,
+        #ffff00 8px 16px,
+        #ff00ff 16px 24px,
+        #00ff00 24px 32px,
+        #00ffff 32px 40px
+    );
+
+    padding: 15px;
+    border: 12px ridge #ffea00;
+    outline: 7px dashed #ff00ff;
+    max-width: 720px;
+    width: 100%;
+
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 35px #00ff00,
+        0 0 60px #ff0000;
+}
+
+.card {
+    background:
+        radial-gradient(circle, #ffea00 3px, transparent 4px),
+        repeating-linear-gradient(
+            45deg,
+            #fff000 0 12px,
+            #ffb000 12px 24px
+        );
+
+    background-size: 22px 22px, auto;
+    border: 12px double #ff0055;
+    outline: 6px dotted #00ff00;
+    outline-offset: -19px;
+    padding: 30px 18px;
+    text-align: center;
+    position: relative;
+    min-height: 450px;
+}
+
+.card:before,
+.card:after {
+    content: "🌺 ✨ 🌼 🦚 🌸 💎 🌺 ✨ 🌼";
+    display: block;
+    font-size: clamp(15px, 3vw, 22px);
+    background: #ff00a8;
+    color: #ffff00;
+    padding: 10px 0;
+    border-top: 5px dotted #00ff00;
+    border-bottom: 5px dotted #00ffff;
+    text-shadow: 2px 2px #000;
+    margin-bottom: 18px;
+}
+
+.card:after {
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.card h1 {
+    font-family: Georgia, serif;
+    color: #ff003c;
+    font-size: clamp(27px, 6vw, 35px);
+    line-height: 1.1;
+    text-shadow: 3px 3px #00ff00,
+                 5px 5px #ff00ff,
+                 -2px -2px #00ffff;
+    margin: 15px 0;
+    background: #ffff00;
+    border: 5px ridge #ff0000;
+    padding: 10px;
+}
+
+.card h2 {
+    font-family: Georgia, serif;
+    color: #ff00cc;
+    font-size: clamp(20px, 4vw, 25px);
+    line-height: 1.2;
+    margin: 20px 0;
+    background: #00ffea;
+    border: 5px double #ff0000;
+    padding: 8px;
+    text-shadow: 2px 2px #ffff00;
+}
+
+.card p {
+    color: #7a0000;
+    line-height: 1.7;
+    font-size: 17px;
+    font-weight: bold;
+    background: rgba(255,255,0,.72);
+    border: 3px dashed #ff00aa;
+    padding: 10px;
+}
+
+.decor {
+    font-size: 27px;
+    margin: 12px;
+    background: #ff00cc;
+    border: 5px ridge #ffff00;
+    padding: 8px;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+#invitationBtn {
+    background: repeating-linear-gradient(
+        45deg,
+        #ff0000 0 10px,
+        #ff00ff 10px 20px
+    );
+
+    color: #ffff00;
+    border: 7px ridge #00ff00;
+    padding: 16px 22px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 28px;
+    transition: transform .3s;
+    text-shadow: 2px 2px black;
+    box-shadow: 0 0 15px #ff0000,
+                0 0 25px #00ff00;
+}
+
+#invitationBtn:hover {
+    background: #00ffff;
+    color: #ff0000;
+    transform: rotate(-5deg);
+}
+
+#message {
+    color: #ff0000;
+    background: #00ff00;
+    border: 5px dotted #ff00ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    min-height: 35px;
+}
+
+#realCard {
+    display: none;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(.3) rotate(15deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.notInvited {
+    color: #ff0000;
+    background: #ffff00;
+    border: 8px ridge #ff00ff;
+    font-size: clamp(32px, 7vw, 55px);
+    font-weight: bold;
+    margin: 25px 0;
+    padding: 15px;
+    text-shadow: 3px 3px #00ff00,
+                 -2px -2px #00ffff;
+    animation: shake .5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+.card .footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #ff0000;
+    background: #00ff00;
+    border: 5px ridge #ff00ff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    font-size: 25px;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+    z-index: 2000;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(900deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:520px) {
+    body { padding: 12px; }
+    .panel { padding: 30px 16px; }
+    .stamp { right: 7px; font-size: 9px; }
+    .outer { padding: 8px; border-width: 8px; }
+    .card { padding: 22px 10px; border-width: 8px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE ONE: INTERACTIVE QUESTIONS -->
+
+<section class="page" id="pageOne">
+
+<main class="panel" id="panelOne">
+
+<div class="stamp">TOP SECRET: WEDDING FILES</div>
+
+<div class="kicker">
+An extremely official and totally unserious announcement
+</div>
+
+<h1>
+Zaryab <span style="color:#ff168b">&</span><br>
+Abubakar
+</h1>
+
+<div class="intro">
+THE BIG DAY IS COMING · YOU HAVE BEEN SUMMONED 💍
+</div>
+
+<div class="rule"></div>
+
+<section id="questionPage">
+
+<div class="progress" id="progress">
+QUESTION 01 / 06
+</div>
+
+<div class="question" id="question">
+Do you want to attend the wedding?
+</div>
+
+<p id="description">
+Choose carefully. This website is dramatic and takes everything personally.
+</p>
+
+<div id="buttonZone">
+
+<button class="yes" id="yesBtn">
+YES, OBVIOUSLY
+</button>
+
+<button class="no" id="noBtn">
+NO 🙄
+</button>
+
+</div>
+
+<div class="small" id="hint">
+P.S. Try moving your cursor over YES. We dare you.
+</div>
+
+</section>
+
+<section id="answerPage" class="hidden">
+
+<div class="badge">
+SYSTEM RESPONSE: ABSOLUTELY NOT
+</div>
+
+<h2>
+YOU'RE STILL<br>
+<span style="color:#ff168b">INVITED.</span>
+</h2>
+
+<p id="answerText">
+HAHA. You thought pressing NO would get you out of this?
+Your name is already on the imaginary guest list.
+</p>
+
+<div class="question" style="font-size:clamp(24px,4vw,38px)">
+Your attendance is now a vibe.
+</div>
+
+<button class="yes" id="nextBtn">
+NEXT QUESTION →
+</button>
+
+</section>
+
+<section id="endQuestions" class="hidden">
+
+<div class="badge">QUESTIONNAIRE COMPLETE</div>
+
+<h2>
+YOU SURVIVED<br>
+<span style="color:#ff168b">THE QUIZ.</span>
+</h2>
+
+<p>
+But the wedding committee has one final document for you to open...
+</p>
+
+<button class="yes" id="openSecondPage">
+OPEN THE OFFICIAL SHAADI PAGE →
+</button>
+
+</section>
+
+<div class="footer">
+NO ESCAPE · NO REFUNDS · MADE WITH QUESTIONABLE LEVELS OF EXCITEMENT
+</div>
+
+</main>
+</section>
+
+
+<!-- PAGE TWO: TRUCK ART INVITATION -->
+
+<section class="page hidden" id="pageTwo">
+
+<div class="outer">
+
+<div class="card">
+
+<div class="decor">
+🌺 🪷 ✨ 🪷 🌺
+</div>
+
+<h1>💍 SHAADI MUBARAK 💍</h1>
+
+<h2>بسم اللہ الرحمن الرحیم</h2>
+
+<p>
+With the blessings of absolutely nobody,<br>
+you are cordially invited to the most<br>
+unnecessary wedding of the year.
+</p>
+
+<div class="decor">
+🪘 🥁 💃 🕺 🪘
+</div>
+
+<h2>THE ROYAL DESI WEDDING</h2>
+
+<p>
+A night of biryani, gossip,<br>
+questionable dance moves and drama.
+</p>
+
+<button id="invitationBtn" onclick="attemptInvite()">
+OPEN YOUR INVITATION 💌
+</button>
+
+<div id="message"></div>
+
+<div id="realCard">
+
+<div class="decor">
+🎊 🎉 🥳 🎊 🎉
+</div>
+
+<h1>CONGRATULATIONS!</h1>
+
+<div class="notInvited">
+YOU ARE NOT INVITED.
+</div>
+
+<h2>😭💀😭</h2>
+
+<p>
+Thank you for showing interest in our prestigious wedding ceremony.
+</p>
+
+<br>
+
+<h2>THE DATE IS GONE BTW.</h2>
+
+<p>
+You missed it.<br>
+The biryani is finished.<br>
+The dance floor is closed.<br>
+Even the phuppos have gone home.
+</p>
+
+<div class="decor">
+💐 🌹 🪷 🌹 💐
+</div>
+
+<h2>BUT WAIT...</h2>
+
+<p>
+YOU CAN STILL SEE THE PICS! 📸
+</p>
+
+<div class="decor">
+💃 🥁 🎊 🥁 💃
+</div>
+
+<h2>THANKS FOR NOT COMING.</h2>
+
+<p>
+With absolutely no love,<br>
+The Wedding Committee 💀
+</p>
+
+</div>
+
+<div class="footer">
+© 2026 • NO ENTRY • NO REFUNDS • NO BIRYANI
+</div>
+
+</div>
+</div>
+</section>
+
+
+<script>
+
+// QUESTIONS
+
+const questions = [
+
+{
+q: "Do you want to attend the wedding?",
+d: "Choose carefully. This website is dramatic and takes everything personally.",
+a: "HAHA. You thought pressing NO would get you out of this? Your name is already on the imaginary guest list."
+},
+
+{
+q: "Will you dance at the wedding?",
+d: "The dance floor needs a main character. Are you volunteering?",
+a: "You have officially been assigned at least one dance. No negotiations."
+},
+
+{
+q: "Will you eat like you haven't seen food before?",
+d: "Please answer honestly. The buffet committee is watching.",
+a: "Your plate is waiting. This is not a drill."
+},
+
+{
+q: "Are you taking 400 pictures?",
+d: "The camera roll is already nervous. Smile practice starts now.",
+a: "Prepare your poses. Every corner is a photoshoot location."
+},
+
+{
+q: "Will you behave during the ceremony?",
+d: "A serious question for a very unserious website.",
+a: "The chaos committee has concerns, but your invitation remains valid."
+},
+
+{
+q: "Are you ready for the most iconic wedding ever?",
+d: "This is your final chance to pretend you're not excited.",
+a: "Correct answer. The wedding is already legendary."
+}
+
+];
+
+let current = 0;
+let dodgeCount = 0;
+
+const el = id => document.getElementById(id);
+
+
+// YES BUTTON RUNS AWAY
+
+function dodgeYes() {
+
+    dodgeCount++;
+
+    const x =
+        (Math.random() > .5 ? 1 : -1) *
+        (55 + Math.random() * Math.min(230, innerWidth * .28));
+
+    const y =
+        (Math.random() > .5 ? 1 : -1) *
+        (15 + Math.random() * 48);
+
+    el('yesBtn').style.transform =
+        `translate(${x}px,${y}px) rotate(${Math.random()*18-9}deg)`;
+
+    el('yesBtn').textContent =
+        ['CATCH ME!', 'TOO SLOW 😭', 'NOPE!', 'I SAID NOPE', 'HAHAHA'][dodgeCount % 5];
+
+    el('hint').textContent =
+        [
+            'The YES button has chosen freedom.',
+            'It is running away from commitment.',
+            'Try again. It enjoys the attention.'
+        ][dodgeCount % 3];
+
+    el('panelOne').classList.remove('glitch');
+
+    void el('panelOne').offsetWidth;
+
+    el('panelOne').classList.add('glitch');
+}
+
+el('yesBtn').addEventListener('mouseenter', dodgeYes);
+
+el('yesBtn').addEventListener('touchstart', e => {
+    e.preventDefault();
+    dodgeYes();
+}, { passive: false });
+
+el('yesBtn').addEventListener('click', dodgeYes);
+
+
+// NO BUTTON REVEALS MESSAGE
+
+function showAnswer() {
+
+    el('questionPage').classList.add('hidden');
+
+    el('answerPage').classList.remove('hidden');
+
+    el('answerText').textContent = questions[current].a;
+
+    el('panelOne').classList.remove('glitch');
+
+    void el('panelOne').offsetWidth;
+
+    el('panelOne').classList.add('glitch');
+}
+
+el('noBtn').addEventListener('click', showAnswer);
+
+
+// NEXT QUESTION
+
+el('nextBtn').addEventListener('click', () => {
+
+    current++;
+
+    if (current >= questions.length) {
+
+        el('answerPage').classList.add('hidden');
+
+        el('endQuestions').classList.remove('hidden');
+
+        return;
+    }
+
+    el('answerPage').classList.add('hidden');
+
+    el('questionPage').classList.remove('hidden');
+
+    el('progress').textContent =
+        `QUESTION ${String(current + 1).padStart(2, '0')} / 06`;
+
+    el('question').textContent = questions[current].q;
+
+    el('description').textContent = questions[current].d;
+
+    el('yesBtn').style.transform = '';
+
+    el('yesBtn').textContent = 'YES, OBVIOUSLY';
+
+    el('noBtn').textContent =
+        ['NO 🙄', 'ABSOLUTELY NOT', 'I REFUSE', 'NO COMMENT', 'STILL NO'][current % 5];
+
+    el('hint').textContent =
+        'Move your cursor over YES. It is still impossible to catch.';
+
+    dodgeCount = 0;
+
+});
+
+
+// LINK TO SECOND PAGE
+
+el('openSecondPage').addEventListener('click', () => {
+
+    el('pageOne').classList.add('hidden');
+
+    el('pageTwo').classList.remove('hidden');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+});
+
+
+// SECOND PAGE BUTTON
+
+let attempts = 0;
+
+function attemptInvite() {
+
+    attempts++;
+
+    const button = el('invitationBtn');
+
+    const message = el('message');
+
+    const realCard = el('realCard');
+
+    if (attempts === 1) {
+
+        message.innerHTML = "HAHAHAHA TRY AGAIN 😭";
+
+        button.style.transform =
+            "translate(80px, -35px) rotate(20deg)";
+
+    }
+
+    else if (attempts === 2) {
+
+        message.innerHTML =
+            "YOU THOUGHT YOU COULD CLICK ME? 💀";
+
+        button.style.transform =
+            "translate(-90px, 35px) rotate(-25deg)";
+
+    }
+
+    else {
+
+        button.style.display = "none";
+
+        message.style.display = "none";
+
+        realCard.style.display = "block";
+
+        launchConfetti();
+
+    }
+
+}
+
+
+// CONFETTI EFFECT
+
+function launchConfetti() {
+
+    const decorations = [
+        "🎉", "🎊", "✨", "💖",
+        "🌸", "🥳", "💐", "🪷"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+
+        const piece = document.createElement('div');
+
+        piece.className = 'confetti';
+
+        piece.textContent =
+            decorations[Math.floor(Math.random() * decorations.length)];
+
+        piece.style.left = Math.random() * 100 + 'vw';
+
+        piece.style.animationDelay =
+            Math.random() * 2 + 's';
+
+        piece.style.animationDuration =
+            (2 + Math.random() * 3) + 's';
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => piece.remove(), 6000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
